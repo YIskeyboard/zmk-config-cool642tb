@@ -5,21 +5,13 @@
 };
 
 &kscan0 {
-        col-gpios
-            = <&xiao_d 10 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 9 GPIO_ACTIVE_HIGH> 
-            , <&xiao_d 8 GPIO_ACTIVE_HIGH> 
-            , <&xiao_d 7 GPIO_ACTIVE_HIGH> 
-            , <&gpio0 10 GPIO_ACTIVE_HIGH>
-            ;
-};
-
-/ {
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-
-    };
+    col-gpios
+        = <&xiao_d 10 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 9 GPIO_ACTIVE_HIGH> 
+        , <&xiao_d 8 GPIO_ACTIVE_HIGH> 
+        , <&xiao_d 7 GPIO_ACTIVE_HIGH> 
+        , <&gpio0 10 GPIO_ACTIVE_HIGH>
+        ;
 };
 
 &pinctrl {
@@ -63,12 +55,14 @@
 };
 
 #include <input/processors.dtsi>
+
 / {
-   trackball_listener: trackball_listener {
+    /* 二重定義を解消し、インプットリスナーを一つに統合 */
+    trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
- トラボ使用後10秒間、レイヤー4が有効
+        
+        /* トラボ使用後一定時間、レイヤー4を有効化 */
         input-processors = <&zip_temp_layer 4 500>;
     };
- };
-
+};

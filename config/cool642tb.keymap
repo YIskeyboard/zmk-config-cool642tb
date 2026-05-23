@@ -130,7 +130,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R             &kp T                                           &kp Y         &kp U  &kp I      &kp O       &kp P
-&kp A             &kp S         &kp D         &kp F             &kp G             &to 1        &lt 5 MINUS      &kp H         &kp J  &kp K      &kp L       &kp ENTER
+&lt 6 A           &kp S         &kp D         &kp F             &kp G             &to 1        &lt 5 MINUS      &kp H         &kp J  &kp K      &kp L       &lt 6 SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B             &lt 4 SQT    &lt 3 LS(EQUAL)  &kp N         &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 6 LANGUAGE_2  &lt 2 LANGUAGE_1  &lt 1 SPACE  &kp BACKSPACE    &lt 2 RETURN                                &kp RCTRL
             >;
@@ -162,7 +162,7 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                   &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                   &kp F1  &kp F2  &trans  &trans  &trans
 &kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_SHIFT  &kp LS(LG(LEFT_ARROW))  &trans          &kp LS(LG(RIGHT_ARROW))  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans                  &trans          &trans                   &trans   &trans  &trans  &trans                          &trans
@@ -195,10 +195,10 @@
 
         layer_6 {
             bindings = <
-&kp Q       &kp W      &kp E     &kp R     &kp T                        &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S      &kp D     &kp F     &kp G        &kp N1  &kp N2  &kp H        &kp J  &kp K      &kp L       &kp ENTER
-&kp Z       &kp X      &kp C     &kp V     &kp B        &kp N3  &kp N4  &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-&kp RSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  &lt 1 SPACE  &kp N5  &kp N6  &lt 2 SPACE                                &kp BSPC
+&trans  &trans  &trans  &trans      &trans                       &trans       &trans      &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &trans       &trans  &trans  &trans       &trans      &trans  &trans  &trans
+&trans  &trans  &trans  &sys_reset  &bootloader  &trans  &trans  &bootloader  &sys_reset  &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &trans       &trans  &trans  &trans                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;

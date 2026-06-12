@@ -124,6 +124,12 @@
         tap-ms = <65>;
     };
 
+　　&trackball {
+    　status = "okay";
+    　automouse-layer = <5>; /* トラックボールを動かしたときに自動移行させたいレイヤー番号を指定（例: レイヤー5） */
+
+　　};
+
     keymap {
         compatible = "zmk,keymap";
 

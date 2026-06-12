@@ -206,7 +206,7 @@
     };
 };
 
-/* キーマップファイルの最末尾をこれに書き換える */
-&pmw3610_listener {
-    input-processors = <&zip_temp_layer 4 700>;
+&trackball {
+    status = "okay";
+    automouse-layer = <4>;
 };

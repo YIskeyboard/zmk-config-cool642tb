@@ -57,12 +57,11 @@
 #include <input/processors.dtsi>
 
 / {
-    /* 二重定義を解消し、インプットリスナーを一つに統合 */
-    trackball_listener {
+    /* 識別用のラベル「trackball_listener:」を追加して構文エラーを修正 */
+    trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
         
-        /* トラボ使用後一定時間、レイヤー4を有効化 */
-        input-processors = <&zip_temp_layer 4 500>;
+        /* トラボ使用後一定時間、レイヤー4(MOUSE)を有効化 */
+        input-processors = <&zip_temp_layer 4 700>;
     };
-};

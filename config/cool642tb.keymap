@@ -206,7 +206,7 @@
     };
 };
 
-/* ルートノードの「外側」に最新のオートマウス定義を配置（全角スペース排除済み） */
-&trackball_listener {
+/* キーマップファイルの最末尾をこれに書き換える */
+&pmw3610_listener {
     input-processors = <&zip_temp_layer 4 700>;
 };

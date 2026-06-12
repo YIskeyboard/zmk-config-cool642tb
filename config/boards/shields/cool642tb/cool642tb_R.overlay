@@ -57,11 +57,13 @@
 #include <input/processors.dtsi>
 
 / {
-    /* 識別用のラベル「trackball_listener:」を追加して構文エラーを修正 */
-    trackball_listener: trackball_listener {
+    /* 構文エラーを完全に回避するため、アドレス付きのユニークなノード名に変更 */
+    trackball_listener: trackball_listener@0 {
         compatible = "zmk,input-listener";
+        reg = <0>; // アドレス付きノードに必須の定義
         device = <&trackball>;
         
         /* トラボ使用後一定時間、レイヤー4(MOUSE)を有効化 */
         input-processors = <&zip_temp_layer 4 700>;
     };
+};

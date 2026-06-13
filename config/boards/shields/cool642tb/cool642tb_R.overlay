@@ -63,11 +63,14 @@
 };
 
 #include <input/processors.dtsi>
- / {
+
+/ {
+    /* トラックボールの入力を監視するリスナー設定 */
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
- トラボ使用後10秒間、レイヤー4が有効
+        
+        /* トラボ使用後、レイヤー4を300ms（必要に応じて調整）有効化 */
         input-processors = <&zip_temp_layer 4 300>;
     };
- };
+};

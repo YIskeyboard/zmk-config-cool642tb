@@ -124,7 +124,7 @@
         tap-ms = <65>;
     };
 
-  keymap {
+    keymap {
         compatible = "zmk,keymap";
 
         default_layer {
@@ -175,7 +175,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &reset  &trans  &trans  &trans  &mkp MB3  &mkp MB4  &mkp MB5
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB4  &mkp MB5
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                              &trans
             >;
 

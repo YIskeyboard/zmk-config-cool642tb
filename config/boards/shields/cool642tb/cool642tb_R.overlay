@@ -1,5 +1,8 @@
 #include "cool642tb.dtsi"
 
+// 入力プロセッサ（zip_temp_layerなど）を使用するために必須のインクルード
+#include <input/processors.dtsi>
+
 &default_transform {
     col-offset = <6>;
 };
@@ -15,10 +18,13 @@
 };
 
 / {
+    // トラックボールの入力を監視し、レイヤーを切り替えるリスナー設定
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
+        
+        // トラボー使用後10秒間（10000ミリ秒）、レイヤー4を有効化
+        input-processors = <&zip_temp_layer 4 10000>;
     };
 };
 
@@ -61,14 +67,3 @@
         scroll-layers = <1>;
     };
 };
-
-// #include <input/processors.dtsi>
-// / {
-//    trackball_listener: trackball_listener {
-//        compatible = "zmk,input-listener";
-//        device = <&trackball>;
-// トラボ使用後10秒間、レイヤー4が有効
-//        input-processors = <&zip_temp_layer 4 10000>;
-//    };
-// };
-

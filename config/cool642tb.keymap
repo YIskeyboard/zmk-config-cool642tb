@@ -125,10 +125,6 @@
         tap-ms = <65>;
     };
 
-　　&mkp_input_listener {
-    input-processors = <&zip_temp_layer 4 1000>;
-　　};
-
     keymap {
         compatible = "zmk,keymap";
 
